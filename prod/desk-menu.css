@@ -14,8 +14,11 @@ nav.desk-toolbar ul {
 nav.desk-toolbar ul li {
   display: inline-block; }
 
+nav.desk-toolbar ul ul {
+  display: block; }
+
 nav.desk-toolbar ul a {
-  display: inline-block;
+  display: block;
   padding: 0.3em 0.6em;
   color: #222;
   text-decoration: none;
@@ -28,6 +31,7 @@ nav.desk-toolbar > ul ul li {
   width: 18em; }
 
 nav.desk-toolbar > ul ul a {
+  display: inline-block;
   width: 12em;
   padding: 0;
   cursor: pointer;

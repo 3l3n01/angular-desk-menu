@@ -36,6 +36,7 @@ angular.module("angular-desk-menu", [])
 				var label = $document[0].createElement("a");
 				label.setAttribute("href", "#");
 				label.innerText = attrs.label;
+				label.textContent = attrs.label;
 				if(element[0].firstChild)element[0].insertBefore(label,element[0].firstChild);
 					else element[0].appendChild(label);
 			}
@@ -68,16 +69,21 @@ angular.module("angular-desk-menu", [])
 	}
 }])
 
-.directive("deskDdOption", ['$document', function($document) {
+.directive("deskDdOption", ['$document', '$timeout', function($document, $timeout) {
 
 	return {
 		restrict: "E",
 		replace: true,
 		transclude: true,
-		template: "<li ng-transclude></li>",
+		template: "<li ng-transclude tabindex='0'></li>",
 		link: function(scope, element, attrs) {
 			element.on("click", function(e) {
 				e.stopPropagation();
+				
+				element[0].style.backgroundColor = "#DDDDDD";
+				$timeout(function() {
+					element[0].style.backgroundColor = "";
+				}, 100);
 			});
 
 			scope.$on("$destroy", function() {
@@ -117,6 +123,7 @@ angular.module("angular-desk-menu", [])
 				var shortcut_obj = $document[0].createElement("span");
 				shortcut_obj.className = "desk-toolbar-shortcut";
 				shortcut_obj.innerText = attrs.shortcut;
+				shortcut_obj.textContent = attrs.shortcut;
 				element[0].appendChild(shortcut_obj);
 			}
 

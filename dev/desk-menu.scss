@@ -33,8 +33,13 @@ nav.desk-toolbar ul li {
 	display:inline-block;
 }
 
+nav.desk-toolbar ul ul {
+	display: block;
+}
+
+
 nav.desk-toolbar ul a {
-	display:inline-block;
+	display: block;
 	padding: 0.3em 0.6em;
 	color:#222;
 	text-decoration:none;
@@ -49,6 +54,7 @@ nav.desk-toolbar > ul ul li {
 }
 
 nav.desk-toolbar > ul ul a {
+	display: inline-block;
 	width: 12em;
 	padding: 0;
 	cursor: pointer;
@@ -59,9 +65,7 @@ nav.desk-toolbar > ul > li > a:hover {
 	border: 1px solid #C6C6C6;
 }
 
-nav.desk-toolbar > ul ul a { 
-	
-}
+
 
 nav.desk-toolbar ul ul li .desk-toolbar-icon {
 	display: inline-block;
