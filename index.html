@@ -24,10 +24,11 @@
 		<desk-option>
 			<desk-label>File</desk-label>
 			<desk-dropdown>
-				<desk-dd-option>
+				<desk-dd-option disabled="'true'">
 					<desk-icon><i class="fa fa-bell-o"></i></desk-icon>
 					<desk-label>Bell</desk-label>
 				</desk-dd-option>
+				<hr>
 				<desk-dd-option desk-value="val">
 					<desk-icon><i class="fa fa-car"></i></desk-icon>
 					<desk-label>Bil</desk-label>
@@ -36,7 +37,7 @@
 							<desk-icon><i class="fa fa-bell-o"></i></desk-icon>
 							<desk-label>Bell</desk-label>
 						</desk-dd-option>
-						<desk-dd-option ng-click="cb('Clickable')" shortcut="Ctrl-C">
+						<desk-dd-option disabled="'true'" ng-click="cb('Clickable')" shortcut="Ctrl-C">
 							<desk-icon><i class="fa fa-car"></i></desk-icon>
 							<desk-label>No callback</desk-label>
 						</desk-dd-option>

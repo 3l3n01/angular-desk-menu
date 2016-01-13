@@ -104,6 +104,10 @@ nav.desk-toolbar ul li:hover > ul {
 	display: inline;
 }
 
+nav.desk-toolbar ul li.desk-option-disabled:hover > ul {
+	display: none;
+}
+
 
 	
 
@@ -119,4 +123,26 @@ nav.desk-toolbar ul ul ul {
 	position: absolute;
 	top: 0em; 
 	left: 19.6em;
+}
+
+nav.desk-toolbar hr {
+	border: 0;
+	height: 1px;
+	/*background-image: linear-gradient(to right, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.10));*/
+	background-color: #DDDDDD;
+	width: 19em;
+}
+
+nav.desk-toolbar .desk-option-disabled {
+	cursor: default !important;
+	color: #AAA;
+}
+
+nav.desk-toolbar .desk-option-disabled:hover {
+	background-color: #FFF;
+}
+
+nav.desk-toolbar .desk-option-disabled a {
+	cursor: default;
+	color: #AAA;
 }

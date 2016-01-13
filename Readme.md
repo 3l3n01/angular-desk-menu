@@ -27,10 +27,11 @@ require("angular-desk-menu")
 <desk-menu desk-keypress callback="cb(value)"> <!-- Optional callback, either use regular ng-click -->
 	<desk-option label="File">
 		<desk-dropdown>
-			<desk-dd-option>
+			<desk-dd-option disabled="'true'"> <!-- Disable option -->
 				<desk-icon><i class="fa fa-bell-o"></i></desk-icon>
 				<desk-label>Bell</desk-label>
 			</desk-dd-option>
+			<hr> <!-- Divider -->
 			<desk-dd-option desk-value="val"> <!-- Use desk-value to send val to callback on click -->
 				<desk-icon><i class="fa fa-car"></i></desk-icon>
 				<desk-label>Car</desk-label>
@@ -70,10 +71,14 @@ angular-desk-menu
 - deskDdOption
 	- desk-value, value gets sent to callback on deskMenu
 	- shortcut (string), Key shortcut for option. Preventing default on choosen shortcuts. Optional Ctrl, Alt, Shift and letter/number separated with dash. Ex Ctrl-C, Shift-Alt-F
+	- disabled, (boolean)
 
 - deskIcon
 	
 - deskLabel
+
+
+### Todo
 
 
 ### License

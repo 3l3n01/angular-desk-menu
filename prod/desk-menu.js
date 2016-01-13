@@ -72,23 +72,39 @@ angular.module("angular-desk-menu", [])
 .directive("deskDdOption", ['$document', '$timeout', function($document, $timeout) {
 
 	return {
+		scope: {
+			disabled: "=",
+			deskValue: "="
+		},
 		restrict: "E",
 		replace: true,
 		transclude: true,
-		template: "<li ng-transclude tabindex='0'></li>",
+		template: "<li ng-transclude tabindex='0' ng-class='{\"desk-option-disabled\": disabled}'></li>",
 		link: function(scope, element, attrs) {
+
+			if (!attrs.hasOwnProperty("disabled"))
+				scope.disabled=false;
+
+
 			element.on("click", function(e) {
 				e.stopPropagation();
-				
-				element[0].style.backgroundColor = "#DDDDDD";
-				$timeout(function() {
-					element[0].style.backgroundColor = "";
-				}, 100);
+
+				if (!scope.disabled) {
+					element[0].style.backgroundColor = "#DDDDDD";
+					$timeout(function() {
+						element[0].style.backgroundColor = "";
+					}, 100);
+
+					if (scope.hasOwnProperty("deskValue"))
+						scope.$emit("desk-toolbar", scope.deskValue);
+				}
+
 			});
 
 			scope.$on("$destroy", function() {
 				element.off("click");
 			});	
+
 
 			var shortcut = null;
 
@@ -111,7 +127,8 @@ angular.module("angular-desk-menu", [])
 				// Add listener for keypress event
 				scope.$on("desk-toolbox-shortcut", function(event, key, e) {
 					if (angular.equals(key, shortcut)) {
-						element[0].click();
+						if (!scope.disabled)
+							element[0].click();
 						e.stopImmediatePropagation();
 						e.preventDefault();
 					}
@@ -139,28 +156,6 @@ angular.module("angular-desk-menu", [])
 		transclude: true,
 		template: "<span class='desk-toolbar-icon' ng-transclude></span>",
 		link: function(scope, element, attrs) {
-		}
-	}
-}])
-
-.directive("deskValue", [function() {
-
-	return {
-		scope: {
-			deskValue: "="
-		},
-		restrict: "A",
-		link: function(scope, element, attrs) {
-			element.on("click", function(e) {
-				e.stopPropagation();
-				scope.$emit("desk-toolbar", scope.deskValue);
-			});
-
-			scope.$on("$destroy", function() {
-				element.off("click");
-			});
-
-
 		}
 	}
 }])
