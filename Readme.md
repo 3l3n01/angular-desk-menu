@@ -52,6 +52,10 @@ require("angular-desk-menu")
 
 ### Docs
 
+##### Modules
+
+angular-desk-menu
+
 ##### Directives
 
 - deskMenu 

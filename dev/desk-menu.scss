@@ -27,11 +27,10 @@ nav.desk-toolbar ul {
 	margin:0;
 	list-style: none;
 	position: relative;
-	}
+}
 	
 nav.desk-toolbar ul li {
 	display:inline-block;
-	
 }
 
 nav.desk-toolbar ul a {
@@ -98,7 +97,7 @@ nav.desk-toolbar ul ul {
 	
 
 nav.desk-toolbar ul li:hover > ul {
-	display:inherit;
+	display: inline;
 }
 
 

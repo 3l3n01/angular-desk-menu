@@ -26,7 +26,6 @@ angular.module("angular-desk-menu", [])
 .directive("deskOption", ['$document', function($document) {
 
 	return {
-		//scope: {},
 		restrict: "E",
 		replace: true,
 		transclude: true,
@@ -48,7 +47,6 @@ angular.module("angular-desk-menu", [])
 .directive("deskLabel", [function() {
 
 	return {
-		//scope: {},
 		restrict: "E",
 		replace: true,
 		transclude: true,
@@ -61,7 +59,6 @@ angular.module("angular-desk-menu", [])
 .directive("deskDropdown", [function() {
 
 	return {
-		//scope: {},
 		restrict: "E",
 		replace: true,
 		transclude: true,
@@ -74,7 +71,6 @@ angular.module("angular-desk-menu", [])
 .directive("deskDdOption", ['$document', function($document) {
 
 	return {
-		//scope: {},
 		restrict: "E",
 		replace: true,
 		transclude: true,
@@ -131,7 +127,6 @@ angular.module("angular-desk-menu", [])
 .directive("deskIcon", [function() {
 
 	return {
-		//scope: {},
 		restrict: "E",
 		replace: true,
 		transclude: true,

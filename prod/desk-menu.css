@@ -61,7 +61,7 @@ nav.desk-toolbar ul ul {
   box-shadow: 0px 2px 4px 0px #CCC; }
 
 nav.desk-toolbar ul li:hover > ul {
-  display: inherit; }
+  display: inline; }
 
 nav.desk-toolbar ul ul li {
   float: none;
