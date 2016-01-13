@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Toolbar test</title>
+	<link rel="stylesheet" type="text/css" href="/prod/desk-menu.css">
+	<link rel="stylesheet" type="text/css" href="/node_modules/font-awesome/css/font-awesome.css">
+
+	<script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+	<script type="text/javascript" src="/dev/desk-menu.js"></script>
+	<script>
+		angular.module("app", ["angular-desk-menu"])
+		.controller("app", function($scope) {
+			$scope.cb = function(value) {
+				console.log(value);
+			}
+
+			$scope.val = "HEllo";
+		});
+	</script>
+</head>
+<body style="font-size: 14px; margin: 0;" ng-app="app" ng-controller="app">
+
+	<desk-menu desk-keypress callback="cb(value)">
+		<desk-option>
+			<desk-label>File</desk-label>
+			<desk-dropdown>
+				<desk-dd-option>
+					<desk-icon><i class="fa fa-bell-o"></i></desk-icon>
+					<desk-label>Bell</desk-label>
+				</desk-dd-option>
+				<desk-dd-option desk-value="val">
+					<desk-icon><i class="fa fa-car"></i></desk-icon>
+					<desk-label>Bil</desk-label>
+					<desk-dropdown>
+						<desk-dd-option desk-value="val">
+							<desk-icon><i class="fa fa-bell-o"></i></desk-icon>
+							<desk-label>Bell</desk-label>
+						</desk-dd-option>
+						<desk-dd-option ng-click="cb('Clickable')" shortcut="Ctrl-C">
+							<desk-icon><i class="fa fa-car"></i></desk-icon>
+							<desk-label>No callback</desk-label>
+						</desk-dd-option>
+					</desk-dropdown>
+
+				</desk-dd-option>
+			</desk-dropdown>
+		</desk-option>
+		<desk-option>
+			<desk-label>File</desk-label>
+			<desk-dropdown>
+				<desk-dd-option desk-value="val">
+					<desk-icon><i class="fa fa-bell-o"></i></desk-icon>
+					<desk-label>Bell</desk-label>
+				</desk-dd-option>
+				<desk-dd-option desk-value="'ctrl-f'" shortcut="Ctrl-F">
+					<desk-icon><i class="fa fa-car"></i></desk-icon>
+					<desk-label>Bil</desk-label>
+				</desk-dd-option>
+			</desk-dropdown>
+		</desk-option>
+		<desk-option label="Labeller">
+			<desk-dropdown>
+				<desk-dd-option desk-value="'brunk'" shortcut="Ctrl-A">
+					<desk-icon><i class="fa fa-bell-o"></i></desk-icon>
+					<desk-label>Bell</desk-label>					
+				</desk-dd-option>
+				<desk-dd-option>
+					<desk-icon><i class="fa fa-car"></i></desk-icon>
+					<desk-label>Bil</desk-label>					
+				</desk-dd-option>
+			</desk-dropdown>
+		</desk-option>
+	<desk-menu>
+
+</body>
+</html>
