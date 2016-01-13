@@ -8,6 +8,18 @@ Not released, be aware directive names may change.
 - Key shortcuts
 - No jQuery
 
+### Installation
+
+```bash
+npm install angular-desk-menu
+```
+
+### Usage
+
+```js
+require("angular-desk-menu")
+```
+
 ### Example
 
 ```html
