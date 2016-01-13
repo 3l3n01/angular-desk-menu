@@ -55,17 +55,17 @@ require("angular-desk-menu")
 ##### Directives
 
 - deskMenu 
-	callback, function, gets value from desk-value as attribute
-	desk-keypress, add this to listen for shortcuts
+	- callback, function, gets value from desk-value as attribute
+	- desk-keypress, add this to listen for shortcuts
 
 - deskOption
-	label (string), Label for menu dropdown
+	- label (string), Label for menu dropdown
 
 - deskDropdown
 
 - deskDdOption
-	desk-value, value gets sent to callback on deskMenu
-	shortcut (string), Key shortcut for option. Preventing default on choosen shortcuts. Optional Ctrl, Alt, Shift and letter/number separated with dash. Ex Ctrl-C, Shift-Alt-F
+	- desk-value, value gets sent to callback on deskMenu
+	- shortcut (string), Key shortcut for option. Preventing default on choosen shortcuts. Optional Ctrl, Alt, Shift and letter/number separated with dash. Ex Ctrl-C, Shift-Alt-F
 
 - deskIcon
 	
