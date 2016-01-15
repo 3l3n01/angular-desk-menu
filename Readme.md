@@ -5,7 +5,7 @@ Not released, be aware directive names may change.
 
 ### Features
 - Unlimited submenus
-- Key shortcuts
+- Keyboard shortcuts
 - No jQuery
 
 ### Installation
@@ -48,7 +48,7 @@ require("angular-desk-menu")
 			</desk-dd-option>
 		</desk-dropdown>
 	</desk-option>
-<desk-menu>
+</desk-menu>
 ```
 
 ### Docs

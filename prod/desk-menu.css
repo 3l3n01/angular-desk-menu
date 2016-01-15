@@ -15,7 +15,8 @@ nav.desk-toolbar ul li {
   display: inline-block; }
 
 nav.desk-toolbar ul ul {
-  display: block; }
+  display: block;
+  background-color: #FFF; }
 
 nav.desk-toolbar ul a {
   display: block;
@@ -32,7 +33,7 @@ nav.desk-toolbar > ul ul li {
 
 nav.desk-toolbar > ul ul a {
   display: inline-block;
-  width: 12em;
+  width: auto;
   padding: 0;
   cursor: pointer;
   margin: 0; }
@@ -50,7 +51,8 @@ nav.desk-toolbar ul ul li .desk-toolbar-shortcut {
   color: #999;
   margin: 0;
   text-align: right;
-  width: 3em; }
+  float: right;
+  position: relative; }
 
 nav.desk-toolbar > ul ul li:hover {
   cursor: pointer;
